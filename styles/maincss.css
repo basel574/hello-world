@@ -1,0 +1,169 @@
+@media all and (min-width: 800px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Roboto, 'Didact Gothic', Caveat, Lobster, Verdana, Helvetica, sans-serif;
+        position: relative;
+    }
+    section {
+        box-sizing: border-box;
+        height: 100vh;
+        padding: 1vw;
+        padding-left: 5vw;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    section:nth-child(odd) { /*нечетные секции с фоновыми картинками*/
+        color: #fff;
+        text-shadow:
+    			-1px -1px 3px #000,
+    			1px -1px 3px #000,
+    			-1px 1px 3px #000,
+    			1px 1px 3px #000;
+        justify-content: flex-end; /*Сдвигает параграфы вниз страницы, для центрирования по вертикали установить center*/
+    }
+    section:nth-child(odd) p { /*нечетные секции с фоновыми картинками*/
+        font-size: 1.8em;
+        line-height: 1.2em;
+    }
+    section:nth-child(even) {   /*четные секции без картинок*/
+        background-color: white;
+        color: #0772a0;
+        justify-content: center;
+    }
+    section:nth-child(even) p { /*четные секции без картинок*/
+        font-size: 1.8em;
+        line-height: 1.2em;
+    }
+    section:first-child {  /*первая титульная секция*/
+        text-transform: uppercase;
+        justify-content: flex-start;
+        align-items: center;
+        background-image: url('../images/header.jpg');
+    }
+    section:first-child h1 {
+        margin: 0;
+        padding: 0;
+        padding-top: 10vh;
+        color: #fff;
+        font-size: 4rem;    /*размер шрифта титульной страницы*/
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    }
+    section:nth-child(3) {
+        background-image: url('../images/william-bossen-120685.jpg');
+    }
+    section:nth-child(5) {
+        background-image: url('../images/63560119035.jpg');
+    }
+    section:nth-child(7) {
+        background-image: url('../images/oboitut.com_2245.jpg');
+    }
+    nav {
+        position: fixed;
+        left: -125px;
+        top: 30vh;
+        color: #DDE0E5;
+        padding: 0;
+        margin-left: 0;
+        transition-duration: 0.5s;
+    }
+    nav ul {
+        display: block;
+        list-style: none;
+        font-size: 16px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: #a0a0a0;
+        background-color: #012F50;
+        border: 1px solid #02213E;
+        display: block;
+        padding: 1vh;
+        border-radius: 10px 0 10px 0;
+        box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+    nav ul li a:hover {
+        color: #fff;
+        border: 1px solid #6cd0f7;
+    }
+    nav ul li a:active {
+        color: #000;
+        background-color: #fff;
+    }
+    nav > div::after {
+        content: "";
+        border-bottom: 2px solid #6cd0f7;
+        width: 30px;
+        height: 30px;
+        border-right: 2px solid #6cd0f7;
+        transform: rotate(-45deg);
+        position: absolute;
+        left: 120px;
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+    }
+    nav > button:hover, nav:hover {
+        left: -40px;
+    }
+    footer {
+        box-sizing: border-box;
+        height: 15vh;
+        width: 95vw;
+        margin: 0px auto;
+        background-color: #0079a5;
+        font-family: Roboto, sans-serif;
+        padding: 1em 2em;
+        color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+        border-radius: 1rem 1rem 0 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        overflow: hidden;
+    }
+    footer a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 0.8em;
+        display: inline-block;
+    }
+    footer p {
+        margin: 0;
+        padding: 0;
+        font-size: 0.8em;
+    }
+    footer div:last-child ul li {
+        display: inline-block;
+    }
+    footer div img {
+        height: 100px;
+        margin: 0 30px;
+    }
+    footer a:hover {
+        color: yellow;
+        transform: scale(1.2);
+        transition: 0.3s;
+        transform-origin: left;
+    }
+    footer div:first-child {
+        float: left;
+    }
+    footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    footer div:first-child ul li:before {
+        content: "ᐅ";
+        color: yellow;
+        margin-right: 5px;
+    }
+    footer div:nth-child(2) {
+        text-align: center;
+    }
+} /*mediaquery*/

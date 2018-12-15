@@ -26,8 +26,8 @@
         justify-content: flex-end; /*Сдвигает параграфы вниз страницы, для центрирования по вертикали установить center*/
     }
     section:nth-child(odd) p { /*нечетные секции с фоновыми картинками*/
-    font-size: 1.8em;
-    line-height: 1.2em;
+        font-size: 1.8em;
+        line-height: 1.2em;
     }
     section:nth-child(even) {   /*четные секции без картинок*/
         background-color: white;
@@ -35,18 +35,22 @@
         justify-content: center;
     }
     section:nth-child(even) p { /*четные секции без картинок*/
-    font-size: 1.8em;
-    line-height: 1.2em;
+        font-size: 1.8em;
+        line-height: 1.2em;
     }
     section:first-child {  /*первая титульная секция*/
         text-transform: uppercase;
         justify-content: flex-start;
         align-items: center;
-    padding-top: 10vh;
+        background-image: url('../images/header.jpg');
+    }
+    section:first-child h1 {
+        margin: 0;
+        padding: 0;
+        padding-top: 10vh;
         color: #fff;
         font-size: 4rem;    /*размер шрифта титульной страницы*/
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-        background-image: url('../images/header.jpg');
     }
     section:nth-child(3) {
         background-image: url('../images/william-bossen-120685.jpg');
@@ -154,7 +158,6 @@
         padding: 0;
         margin: 0;
     }
-
     footer div:first-child ul li:before {
         content: "ᐅ";
         color: yellow;
